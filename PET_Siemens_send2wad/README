@@ -12,4 +12,10 @@ This folder contains the source code for the processing of PETQC reports generat
 The executable has to be installed on the system (AT YOUR OWN RISK!!) and the configuration file has to be appropriately configured.
 
 - The source code is located in the source directory
-- An executable is currently not (yet) provided
+
+A binary can be created using the pyinstaller package:   
+pyinstaller File2DicomSend.py --one-file
+
+A smaller executable can be obtained using the upx utility (https://upx.github.io).   
+The path to the unzipped folder containing the upx binary should be provided as follows:   
+pyinstaller File2DicomSend.py --one-file --upx-dir=..\upx395   (either use a relative or absolute path)
